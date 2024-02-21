@@ -1,0 +1,56 @@
+PROGRAM:
+#include<stdio.h>
+int main() 
+{
+    char plaintext[500], ch;
+    int key;
+    printf("Enter a plain text to encrypt: ");
+    scanf("%s", plaintext);
+    printf("Enter the key: ");
+    scanf("%d", & key);
+    for (int i = 0; plaintext[i] != '\0'; ++i) {
+        ch = plaintext[i];
+        if (isalnum(ch)) {
+            if (islower(ch)) {
+                ch = (ch - 'a' + key) % 26 + 'a';
+            }
+            if (isupper(ch)) {
+                ch = (ch - 'A' + key) % 26 + 'A';
+            }
+            if (isdigit(ch)) {
+                ch = (ch - '0' + key) % 10 + '0';
+            }
+        }
+        else {
+            printf("Invalid Message");
+        }
+        plaintext[i] = ch;
+    }
+    printf("Encrypted message: %s\n", plaintext);
+    for (int i = 0; plaintext[i] != '\0'; ++i){
+        ch=plaintext[i];
+        if(isalnum(ch)){
+            if(islower(ch)){
+                ch=(ch-'a'-key)%26 +'a';
+            }
+            if(isupper(ch)){
+                ch=(ch-'A'-key)%26+'A';
+            }
+            if(isdigit(ch)){
+                ch=(ch-'0'+key)%10+'0';
+            }
+        }
+        else{
+            printf("invalid message");
+        }
+        plaintext[i]=ch;
+    }
+    printf("Decrypted message at reciever side is :%s",plaintext);
+
+    return 0;
+}
+OUTPUT:
+Enter a plain text to encrypt: hi
+Enter the key: 2
+Encrypted message: jk
+Decrypted message at reciever side is :hi
