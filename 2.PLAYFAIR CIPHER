@@ -6,7 +6,7 @@
 
 // this function will convert the string to lowercase
 
-void toLowerCase(char plain[], int ps)
+void toLowerCase(char plain[], int ps) 
 {
     int i;
     for (i = 0; i < ps; i++) {
