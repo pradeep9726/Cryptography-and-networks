@@ -44,9 +44,9 @@ int main() {
     return 0;
 }
 OUTPUT:
-/tmp/GNLSj3RHlJ.o
-Enter the plaintext:wearediscoveredsaveyourself
-enter the key:deceptive
-Original Plaintext: wearediscoveredsaveyourself
+Enter the plaintext:WEAREDISCOVEREDSAVEYOURSELF
+enter the key:9 0 1 7 23 15 21 14 11 11 2 8 9
+Original Plaintext: WEAREDISCOVEREDSAVEYOURSELF
 
-Encrypted Text: wihrlluaqwumrehagzogwursipf
+Encrypted Text: FKHRLLCVYRCHREPV1BWBWURS3RF
+
