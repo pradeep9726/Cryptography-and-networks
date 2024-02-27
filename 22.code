@@ -12,12 +12,8 @@ int main() {
     char key[] = "0111111101";               // Binary key
     char iv[] = "10101010";                  // Binary initialization vector
 
-    int length = 16;  // Manually set the length
-
-    // S-DES CBC Mode Encryption
+    int length = 16;  
     encrypt_sdes_cbc(plaintext, key, iv, length);
-    
-    // S-DES CBC Mode Decryption
     decrypt_sdes_cbc(plaintext, key, iv, length);
 
     return 0;
